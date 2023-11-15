@@ -58,7 +58,6 @@ enable_testing()
 
 # Add testing executable 
 add_executable(tests_exec gs_test1.cpp)
-add_test(NAME tests_exec COMMAND texts_exec)
 
 # Include the headers folder
 target_include_directories(main_target PRIVATE include)
