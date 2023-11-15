@@ -53,6 +53,13 @@ add_subdirectory(tests)  # Move this line up
 # Add the main executable
 add_executable(main_target main.cpp)
 
+# Enable Testing
+enable_testing()
+
+# Add testing executable 
+add_executable(tests_exec gs_test1.cpp)
+add_test(NAME tests_exec COMMAND texts_exec)
+
 # Include the headers folder
 target_include_directories(main_target PRIVATE include)
 
