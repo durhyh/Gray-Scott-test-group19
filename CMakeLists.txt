@@ -3,7 +3,6 @@
 cmake_minimum_required(VERSION 3.5)
 set(CMAKE_GENERATOR "MinGW Makefiles")
 project(gray-scott-sim)
-# include_directories(C:/Users/Reynaud/Desktop/gray-scott-sim/acutest-master)
 
 # 设置 C++ 标准
 set(CMAKE_CXX_STANDARD 11)
@@ -52,12 +51,6 @@ add_subdirectory(tests)  # Move this line up
 
 # Add the main executable
 add_executable(main_target main.cpp)
-
-# Enable Testing
-enable_testing()
-
-# Add testing executable 
-add_executable(tests_exec gs_test1.cpp)
 
 # Include the headers folder
 target_include_directories(main_target PRIVATE include)
