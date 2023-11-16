@@ -39,3 +39,16 @@ This test confirms the mathematical correctness of the simulation when the initi
 
 The test project above selects the Acutest framework. To use Google Test, we don't need to install any additional libraries. We can simply download the source code of the Google Test framework from the official code library, which includes the header files, and then link it to our test project. By including the necessary header files in our test files, we can utilize the functionalities provided by Acutest. These functionalities include writing and running tests, creating test fixtures and test suites and parameterized testing
 
+##Build a System
+
+In order to improve convenience in unit testing, ensure the correctness of the main function, enhance code readability, maintainability, and testability, and make the project clearer, more modular, and easier to develop and maintain, we have made changes to the "gs.cpp" file.
+
+Firstly, we have created a new file called "main" in the main folder. The main function has been moved to this file for better organization.
+
+Secondly, the remaining code from the "gs.cpp" file has been placed in the "lib" folder, which is located within the "test" folder. This separation allows for better isolation and testing of the code.
+
+Additionally, we have created an "include" folder to store the Acutest header files. This folder contains a header file named "gs.h" which facilitates the calling of simulation parameters and functions required by the three tests.
+
+Lastly, a new test file named "gs-test-1.cpp" has been created in the "test" folder. This file is used for testing the functionality of the code.
+
+These changes ensure that unit testing is more convenient, the main function is correct, the code is easier to read, maintain, and test, and the project is clearer, more modular, and easier to develop and maintain.
