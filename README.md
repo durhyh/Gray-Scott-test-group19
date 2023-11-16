@@ -26,10 +26,16 @@ After the simulation is completed, the ‘countElementsAboveThreshold’ functio
 ##Test Program
 
 The test program is to prove that the main program is greatly complete the simulation and make sure the logic and data is correct, including three parts:
-Test1: Verification the type of 
-Check that the type of the model parameters (F, k) matches that of the element type of the u and v vectors. 
 
-Test2:
+Test1: Verification the type of model parameters and vectors
+Check that the type of the model parameters (F, k) matches that of the element type of the u and v vectors. Use the "typeid" function to obtain the data type of the first element of the v, u arrays, F and k and perform corresponding comparisons.
+
+Test2: Verification the same size of vectors u and v
+Check that the variables u and v are the same size. First, use the "array.size" function to calculate the number of rows of u and v arrays and compare them. Then, determine the columns of both u and v arrays, and compare them.
+
 
 Test3: Verification of Simulation Accuracy with Zero Initial Values
 This test confirms the mathematical correctness of the simulation when the initial concentrations of both chemicals u and v are set to zero. The testing process includes the steps such as initialisation, simulation execution and results verification. The third test in our simulation suite is designed to establish the mathematical accuracy of the Gray-Scott model under the condition that both chemicals u and v start with zero initial concentrations. It proceeds by initialising the entire grid to zero and then running the simulation for the designated number of iterations. After the simulation, the test checks for any non-zero values in ‘u’ to detect unexpected reactions, and verifies that ‘v’ maintains zero values throughout, thus ensuring that the simulation behaves as predicted when devoid of initial reactants.
+
+The test project above selects the Acutest framework. To use Google Test, we don't need to install any additional libraries. We can simply download the source code of the Google Test framework from the official code library, which includes the header files, and then link it to our test project. By including the necessary header files in our test files, we can utilize the functionalities provided by Acutest. These functionalities include writing and running tests, creating test fixtures and test suites and parameterized testing
+
